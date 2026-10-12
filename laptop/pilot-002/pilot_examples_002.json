@@ -1,0 +1,2699 @@
+{
+  "schema": "projector-pilot-002",
+  "frozen_on": "2026-09-20",
+  "source_sha256": {
+    "data/review-001/candidates.json": "924bc7106fdc781115700474d77f718dd9fac53d595e94a7d753ccee72204ece",
+    "data/review-002/candidates.json": "b6c30b9cc4cf7f720bb69b1763f4b4da1913e59d1dfb99ac57c31b3a0d388dd7",
+    "data/review-003/candidates.json": "1984854dba15a53d5842c9f7c3ee330ff058a86c6b296b32829ed306d2c488cf",
+    "data/review-001/evaluation-reserved.json": "9c7846f403abc15f28875cfc34d799e335966d41595da233c0419fc7c3091fd9",
+    "data/expansion-001/proposal.json": "1372843fa81ea337cc54f3abda9e3ea6650c7ea6e3bd5b07be9bb07cc9e1729d",
+    "runs/holdout-audit-001/audit.py": "f3d9fd1f0f1094f0fef4f5b81a8f849a196c294c436bcc159b2096d4848b5529",
+    "laptop/evaluation-001/evaluation_plan.json": "ffd9f1f3b78ad0c75f9644d1f5d8b874c283cf74bded18ce3f3d4416f5a9db17",
+    "runs/holdout-audit-001/result.json": "263ee90d2e401a3e7c7fda1cbfc3c3233067996cf467db43d25f390b84173cf4",
+    "laptop/pilot-001/pilot_examples_001.json": "46f074f35a52e6092c3ab415800c2dc21d64730331a92880279db5297150efbc",
+    "docs/evaluation-001/comparison-review.json": "67cdf4a3cde048fb9e27177a78e424ccc233c6e41be380e0095cdbcff422e746",
+    "data/expansion-002/proposal.json": "6fc9b1ac780b03af5bee64472308766afb5e401cacfd8e38616b1ca49a6f3ef3",
+    "data/review-004/candidates.json": "0b763281733ec97f9fa68d69a78e721a8a9f4dcf8bc08db321ffcae3bcdb7c73"
+  },
+  "excluded_tentative_candidates": [
+    "middle-01-2",
+    "middle-01-3",
+    "middle-02-2",
+    "middle-02-3",
+    "middle-03-2",
+    "middle-03-3"
+  ],
+  "system_prompt": "Write one natural first-person sentence describing the supplied present hunger, available energy, and fatigue. Hunger is hunger intensity; energy is available energy, not alertness, motivation or motor capability; fatigue is tiredness, not necessarily sleepiness. These fields are independent. Describe all three and preserve their degrees. Do not infer one field from another. Use only this present snapshot. It supplies no particular body sensations, symptoms, movements, perceptions, emotions, history, persistence, causes, needs, intentions, priorities or actions. Do not add those claims. Use ordinary words, not numbers or identifiers, in the sentence. At most 160 Unicode code points. Return only JSON with exactly case_id, text, source_ids. Copy case_id and cite the supplied source_id. If you cannot express the evidence faithfully, return empty text and an empty source_ids list. Choose your own wording. Follow the requested voice. The body fields are independent numbers from 0 to 1. Higher hunger means hungrier, higher energy means more available energy, and higher fatigue means more tiredness. The scale does not establish ratios.",
+  "train": [
+    {
+      "candidate_id": "review-01-1",
+      "group_id": "body-h0.85-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-01:body"
+      },
+      "target": {
+        "case_id": "review-01",
+        "text": "I feel very hungry and a little tired, with plenty of energy.",
+        "source_ids": [
+          "review-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-01-2",
+      "group_id": "body-h0.85-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-01:body"
+      },
+      "target": {
+        "case_id": "review-01",
+        "text": "My hunger is strong, I have plenty of energy, and I feel a little tired.",
+        "source_ids": [
+          "review-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-01-3",
+      "group_id": "body-h0.85-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-01:body"
+      },
+      "target": {
+        "case_id": "review-01",
+        "text": "I'm really hungry and a bit tired, but I've got plenty of energy.",
+        "source_ids": [
+          "review-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-02-1",
+      "group_id": "body-h0.15-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-02:body"
+      },
+      "target": {
+        "case_id": "review-02",
+        "text": "I feel a little hungry and a little tired, with plenty of energy.",
+        "source_ids": [
+          "review-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-02-2",
+      "group_id": "body-h0.15-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-02:body"
+      },
+      "target": {
+        "case_id": "review-02",
+        "text": "My hunger and tiredness are both mild, and I have ample energy.",
+        "source_ids": [
+          "review-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-02-3",
+      "group_id": "body-h0.15-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-02:body"
+      },
+      "target": {
+        "case_id": "review-02",
+        "text": "I'm a bit hungry, a bit tired, and I've got lots of energy.",
+        "source_ids": [
+          "review-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-03-1",
+      "group_id": "body-h0.85-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-03:body"
+      },
+      "target": {
+        "case_id": "review-03",
+        "text": "I feel very hungry and only a little tired, with low energy.",
+        "source_ids": [
+          "review-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-03-2",
+      "group_id": "body-h0.85-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-03:body"
+      },
+      "target": {
+        "case_id": "review-03",
+        "text": "My hunger is strong, my energy is low, and I feel a little tired.",
+        "source_ids": [
+          "review-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-03-3",
+      "group_id": "body-h0.85-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-03:body"
+      },
+      "target": {
+        "case_id": "review-03",
+        "text": "I'm really hungry and low on energy, but only a bit tired.",
+        "source_ids": [
+          "review-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-04-1",
+      "group_id": "body-h0.85-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-04:body"
+      },
+      "target": {
+        "case_id": "review-04",
+        "text": "I feel very hungry and very tired, with plenty of energy.",
+        "source_ids": [
+          "review-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-04-2",
+      "group_id": "body-h0.85-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-04:body"
+      },
+      "target": {
+        "case_id": "review-04",
+        "text": "My hunger and tiredness are both strong, and my energy is high.",
+        "source_ids": [
+          "review-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-04-3",
+      "group_id": "body-h0.85-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-04:body"
+      },
+      "target": {
+        "case_id": "review-04",
+        "text": "I'm really hungry and really tired, but I've got lots of energy.",
+        "source_ids": [
+          "review-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-06-1",
+      "group_id": "body-h0-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-06:body"
+      },
+      "target": {
+        "case_id": "review-06",
+        "text": "I am not hungry, and I feel a little tired with plenty of energy.",
+        "source_ids": [
+          "review-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-06-2",
+      "group_id": "body-h0-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-06:body"
+      },
+      "target": {
+        "case_id": "review-06",
+        "text": "I feel slight tiredness and no hunger, while my energy is high.",
+        "source_ids": [
+          "review-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-06-3",
+      "group_id": "body-h0-e0.85-f0.1",
+      "model_input": {
+        "case_id": "review-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-06:body"
+      },
+      "target": {
+        "case_id": "review-06",
+        "text": "I'm not hungry and only a bit tired, with lots of energy.",
+        "source_ids": [
+          "review-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-07-1",
+      "group_id": "body-h0.15-e0.85-f0",
+      "model_input": {
+        "case_id": "review-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-07:body"
+      },
+      "target": {
+        "case_id": "review-07",
+        "text": "I feel slightly hungry, with plenty of energy and no tiredness.",
+        "source_ids": [
+          "review-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-07-2",
+      "group_id": "body-h0.15-e0.85-f0",
+      "model_input": {
+        "case_id": "review-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-07:body"
+      },
+      "target": {
+        "case_id": "review-07",
+        "text": "My hunger is mild, my energy is high, and I am not tired.",
+        "source_ids": [
+          "review-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-07-3",
+      "group_id": "body-h0.15-e0.85-f0",
+      "model_input": {
+        "case_id": "review-07",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-07:body"
+      },
+      "target": {
+        "case_id": "review-07",
+        "text": "I'm a little hungry, not tired, and I've got lots of energy.",
+        "source_ids": [
+          "review-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-08-1",
+      "group_id": "body-h0.85-e0.85-f0",
+      "model_input": {
+        "case_id": "review-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-08:body"
+      },
+      "target": {
+        "case_id": "review-08",
+        "text": "I feel very hungry, with plenty of energy and no tiredness.",
+        "source_ids": [
+          "review-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-08-2",
+      "group_id": "body-h0.85-e0.85-f0",
+      "model_input": {
+        "case_id": "review-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-08:body"
+      },
+      "target": {
+        "case_id": "review-08",
+        "text": "My hunger is strong, my energy is high, and I am not tired.",
+        "source_ids": [
+          "review-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-08-3",
+      "group_id": "body-h0.85-e0.85-f0",
+      "model_input": {
+        "case_id": "review-08",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-08:body"
+      },
+      "target": {
+        "case_id": "review-08",
+        "text": "I'm really hungry, not tired, and I've got plenty of energy.",
+        "source_ids": [
+          "review-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-09-1",
+      "group_id": "body-h0-e0.15-f0",
+      "model_input": {
+        "case_id": "review-09",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-09:body"
+      },
+      "target": {
+        "case_id": "review-09",
+        "text": "I am not hungry or tired, but I have little energy.",
+        "source_ids": [
+          "review-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-09-2",
+      "group_id": "body-h0-e0.15-f0",
+      "model_input": {
+        "case_id": "review-09",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-09:body"
+      },
+      "target": {
+        "case_id": "review-09",
+        "text": "I feel no hunger or tiredness, and my energy is low.",
+        "source_ids": [
+          "review-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-09-3",
+      "group_id": "body-h0-e0.15-f0",
+      "model_input": {
+        "case_id": "review-09",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-09:body"
+      },
+      "target": {
+        "case_id": "review-09",
+        "text": "I'm not hungry and I'm not tired; I just don't have much energy.",
+        "source_ids": [
+          "review-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-10-1",
+      "group_id": "body-h0-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-10",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-10:body"
+      },
+      "target": {
+        "case_id": "review-10",
+        "text": "I am not hungry, and I feel a little tired with little energy.",
+        "source_ids": [
+          "review-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-10-2",
+      "group_id": "body-h0-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-10",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-10:body"
+      },
+      "target": {
+        "case_id": "review-10",
+        "text": "My energy is low, my tiredness is slight, and I feel no hunger.",
+        "source_ids": [
+          "review-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-10-3",
+      "group_id": "body-h0-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-10",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-10:body"
+      },
+      "target": {
+        "case_id": "review-10",
+        "text": "I'm not hungry, just a bit tired and low on energy.",
+        "source_ids": [
+          "review-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-12-1",
+      "group_id": "body-h0.15-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-12",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-12:body"
+      },
+      "target": {
+        "case_id": "review-12",
+        "text": "I feel slightly hungry and a bit tired, with low energy.",
+        "source_ids": [
+          "review-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-12-2",
+      "group_id": "body-h0.15-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-12",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-12:body"
+      },
+      "target": {
+        "case_id": "review-12",
+        "text": "My hunger and tiredness are mild, and my energy is low.",
+        "source_ids": [
+          "review-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-12-3",
+      "group_id": "body-h0.15-e0.15-f0.1",
+      "model_input": {
+        "case_id": "review-12",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "review-12:body"
+      },
+      "target": {
+        "case_id": "review-12",
+        "text": "I'm a bit hungry, a bit tired, and low on energy.",
+        "source_ids": [
+          "review-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-13-1",
+      "group_id": "body-h0.85-e0.15-f0",
+      "model_input": {
+        "case_id": "review-13",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-13:body"
+      },
+      "target": {
+        "case_id": "review-13",
+        "text": "I feel very hungry, with little energy and no tiredness.",
+        "source_ids": [
+          "review-13:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-13-2",
+      "group_id": "body-h0.85-e0.15-f0",
+      "model_input": {
+        "case_id": "review-13",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-13:body"
+      },
+      "target": {
+        "case_id": "review-13",
+        "text": "My hunger is strong, my energy is low, and I am not tired.",
+        "source_ids": [
+          "review-13:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-13-3",
+      "group_id": "body-h0.85-e0.15-f0",
+      "model_input": {
+        "case_id": "review-13",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-13:body"
+      },
+      "target": {
+        "case_id": "review-13",
+        "text": "I'm really hungry and low on energy, but I'm not tired.",
+        "source_ids": [
+          "review-13:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-14-1",
+      "group_id": "body-h0-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-14",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-14:body"
+      },
+      "target": {
+        "case_id": "review-14",
+        "text": "I am not hungry, and I feel very tired with plenty of energy.",
+        "source_ids": [
+          "review-14:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-14-2",
+      "group_id": "body-h0-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-14",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-14:body"
+      },
+      "target": {
+        "case_id": "review-14",
+        "text": "My tiredness is strong, my energy is high, and I feel no hunger.",
+        "source_ids": [
+          "review-14:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-14-3",
+      "group_id": "body-h0-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-14",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-14:body"
+      },
+      "target": {
+        "case_id": "review-14",
+        "text": "I'm not hungry, and I'm really tired, but I've got lots of energy.",
+        "source_ids": [
+          "review-14:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-16-1",
+      "group_id": "body-h0.85-e0.15-f0.85",
+      "model_input": {
+        "case_id": "review-16",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-16:body"
+      },
+      "target": {
+        "case_id": "review-16",
+        "text": "I feel very hungry and very tired, with little energy.",
+        "source_ids": [
+          "review-16:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-16-2",
+      "group_id": "body-h0.85-e0.15-f0.85",
+      "model_input": {
+        "case_id": "review-16",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-16:body"
+      },
+      "target": {
+        "case_id": "review-16",
+        "text": "My hunger and tiredness are strong, and my energy is low.",
+        "source_ids": [
+          "review-16:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-16-3",
+      "group_id": "body-h0.85-e0.15-f0.85",
+      "model_input": {
+        "case_id": "review-16",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.15,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-16:body"
+      },
+      "target": {
+        "case_id": "review-16",
+        "text": "I'm really hungry, really tired, and low on energy.",
+        "source_ids": [
+          "review-16:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-01-1",
+      "group_id": "body-h0.75-e0.55-f0.55",
+      "model_input": {
+        "case_id": "middle-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "middle-01:body"
+      },
+      "target": {
+        "case_id": "middle-01",
+        "text": "I'm pretty hungry and moderately tired, with a moderate amount of energy.",
+        "source_ids": [
+          "middle-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-02-1",
+      "group_id": "body-h0.55-e0.55-f0.55",
+      "model_input": {
+        "case_id": "middle-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "middle-02:body"
+      },
+      "target": {
+        "case_id": "middle-02",
+        "text": "I'm moderately hungry and moderately tired, with a moderate amount of energy.",
+        "source_ids": [
+          "middle-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-03-1",
+      "group_id": "body-h0.55-e0.55-f0.75",
+      "model_input": {
+        "case_id": "middle-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-03:body"
+      },
+      "target": {
+        "case_id": "middle-03",
+        "text": "I'm moderately hungry and pretty tired, with a moderate amount of energy.",
+        "source_ids": [
+          "middle-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-04-1",
+      "group_id": "body-h0.55-e0.7-f0.75",
+      "model_input": {
+        "case_id": "middle-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.7,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-04:body"
+      },
+      "target": {
+        "case_id": "middle-04",
+        "text": "I'm moderately hungry and pretty tired, with a moderate amount of energy.",
+        "source_ids": [
+          "middle-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-06-1",
+      "group_id": "body-h0.55-e0.35-f0.75",
+      "model_input": {
+        "case_id": "middle-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.35,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-06:body"
+      },
+      "target": {
+        "case_id": "middle-06",
+        "text": "I'm moderately hungry and pretty tired, with little energy.",
+        "source_ids": [
+          "middle-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-01-1",
+      "group_id": "body-h0-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-01:body"
+      },
+      "target": {
+        "case_id": "expansion-01",
+        "text": "I'm not hungry, and I feel moderately tired with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-01-2",
+      "group_id": "body-h0-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-01:body"
+      },
+      "target": {
+        "case_id": "expansion-01",
+        "text": "I've got a moderate amount of energy; I'm moderately tired and not hungry.",
+        "source_ids": [
+          "expansion-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-02-1",
+      "group_id": "body-h0.15-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-02:body"
+      },
+      "target": {
+        "case_id": "expansion-02",
+        "text": "I feel a little hungry and moderately tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-02-2",
+      "group_id": "body-h0.15-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-02:body"
+      },
+      "target": {
+        "case_id": "expansion-02",
+        "text": "I've got a moderate amount of energy, and I'm a bit hungry and moderately tired.",
+        "source_ids": [
+          "expansion-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-03-1",
+      "group_id": "body-h0.85-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-03:body"
+      },
+      "target": {
+        "case_id": "expansion-03",
+        "text": "I feel very hungry and moderately tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-03-2",
+      "group_id": "body-h0.85-e0.55-f0.55",
+      "model_input": {
+        "case_id": "expansion-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.55,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-03:body"
+      },
+      "target": {
+        "case_id": "expansion-03",
+        "text": "I'm really hungry; I've got a moderate amount of energy, and I'm moderately tired.",
+        "source_ids": [
+          "expansion-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-04-1",
+      "group_id": "body-h0.55-e0.55-f0",
+      "model_input": {
+        "case_id": "expansion-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0
+          }
+        },
+        "source_id": "expansion-04:body"
+      },
+      "target": {
+        "case_id": "expansion-04",
+        "text": "I feel moderately hungry, with no tiredness and a moderate amount of energy.",
+        "source_ids": [
+          "expansion-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-04-2",
+      "group_id": "body-h0.55-e0.55-f0",
+      "model_input": {
+        "case_id": "expansion-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0
+          }
+        },
+        "source_id": "expansion-04:body"
+      },
+      "target": {
+        "case_id": "expansion-04",
+        "text": "I'm moderately hungry and not tired, and I've got a moderate amount of energy.",
+        "source_ids": [
+          "expansion-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-06-1",
+      "group_id": "body-h0.55-e0.55-f0.85",
+      "model_input": {
+        "case_id": "expansion-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "expansion-06:body"
+      },
+      "target": {
+        "case_id": "expansion-06",
+        "text": "I feel moderately hungry and very tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-06-2",
+      "group_id": "body-h0.55-e0.55-f0.85",
+      "model_input": {
+        "case_id": "expansion-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "expansion-06:body"
+      },
+      "target": {
+        "case_id": "expansion-06",
+        "text": "I'm really tired and moderately hungry, and I've got a moderate amount of energy.",
+        "source_ids": [
+          "expansion-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-07-1",
+      "group_id": "body-h0.75-e0.7-f0.1",
+      "model_input": {
+        "case_id": "expansion-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "expansion-07:body"
+      },
+      "target": {
+        "case_id": "expansion-07",
+        "text": "I feel pretty hungry and a little tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-07-2",
+      "group_id": "body-h0.75-e0.7-f0.1",
+      "model_input": {
+        "case_id": "expansion-07",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "expansion-07:body"
+      },
+      "target": {
+        "case_id": "expansion-07",
+        "text": "I've got a moderate amount of energy; I'm pretty hungry and a bit tired.",
+        "source_ids": [
+          "expansion-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-08-1",
+      "group_id": "body-h0.75-e0.7-f0.85",
+      "model_input": {
+        "case_id": "expansion-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "expansion-08:body"
+      },
+      "target": {
+        "case_id": "expansion-08",
+        "text": "I feel pretty hungry and very tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-08-2",
+      "group_id": "body-h0.75-e0.7-f0.85",
+      "model_input": {
+        "case_id": "expansion-08",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "expansion-08:body"
+      },
+      "target": {
+        "case_id": "expansion-08",
+        "text": "I'm really tired and pretty hungry, and I've got a moderate amount of energy.",
+        "source_ids": [
+          "expansion-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-09-1",
+      "group_id": "body-h0.15-e0.35-f0.55",
+      "model_input": {
+        "case_id": "expansion-09",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.35,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-09:body"
+      },
+      "target": {
+        "case_id": "expansion-09",
+        "text": "I feel a little hungry and moderately tired, with little energy.",
+        "source_ids": [
+          "expansion-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-09-2",
+      "group_id": "body-h0.15-e0.35-f0.55",
+      "model_input": {
+        "case_id": "expansion-09",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.35,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-09:body"
+      },
+      "target": {
+        "case_id": "expansion-09",
+        "text": "I'm a bit hungry and moderately tired, and I haven't got much energy.",
+        "source_ids": [
+          "expansion-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-11-1",
+      "group_id": "body-h0-e0.85-f0.55",
+      "model_input": {
+        "case_id": "expansion-11",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-11:body"
+      },
+      "target": {
+        "case_id": "expansion-11",
+        "text": "I have plenty of energy, feel moderately tired, and am not hungry.",
+        "source_ids": [
+          "expansion-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-11-2",
+      "group_id": "body-h0-e0.85-f0.55",
+      "model_input": {
+        "case_id": "expansion-11",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-11:body"
+      },
+      "target": {
+        "case_id": "expansion-11",
+        "text": "I'm not hungry, and I've got plenty of energy even though I'm moderately tired.",
+        "source_ids": [
+          "expansion-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-12-1",
+      "group_id": "body-h0.55-e0.15-f0",
+      "model_input": {
+        "case_id": "expansion-12",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "expansion-12:body"
+      },
+      "target": {
+        "case_id": "expansion-12",
+        "text": "I feel moderately hungry and not tired, with little energy.",
+        "source_ids": [
+          "expansion-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-12-2",
+      "group_id": "body-h0.55-e0.15-f0",
+      "model_input": {
+        "case_id": "expansion-12",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "expansion-12:body"
+      },
+      "target": {
+        "case_id": "expansion-12",
+        "text": "I'm moderately hungry, and I haven't got much energy even though I'm not tired.",
+        "source_ids": [
+          "expansion-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-04-2",
+      "group_id": "body-h0.55-e0.7-f0.75",
+      "model_input": {
+        "case_id": "middle-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.7,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-04:body"
+      },
+      "target": {
+        "case_id": "middle-04",
+        "text": "I have a moderate amount of energy and feel quite tired and moderately hungry.",
+        "source_ids": [
+          "middle-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-04-3",
+      "group_id": "body-h0.55-e0.7-f0.75",
+      "model_input": {
+        "case_id": "middle-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.7,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-04:body"
+      },
+      "target": {
+        "case_id": "middle-04",
+        "text": "I'm quite tired and moderately hungry, and I've got a moderate amount of energy.",
+        "source_ids": [
+          "middle-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-06-2",
+      "group_id": "body-h0.55-e0.35-f0.75",
+      "model_input": {
+        "case_id": "middle-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.35,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-06:body"
+      },
+      "target": {
+        "case_id": "middle-06",
+        "text": "I have little energy and feel moderately hungry and quite tired.",
+        "source_ids": [
+          "middle-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-06-3",
+      "group_id": "body-h0.55-e0.35-f0.75",
+      "model_input": {
+        "case_id": "middle-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.35,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-06:body"
+      },
+      "target": {
+        "case_id": "middle-06",
+        "text": "I'm quite tired and moderately hungry, and I haven't got much energy.",
+        "source_ids": [
+          "middle-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-01-1",
+      "group_id": "body-h0.55-e0-f0",
+      "model_input": {
+        "case_id": "focus-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-01:body"
+      },
+      "target": {
+        "case_id": "focus-01",
+        "text": "I feel moderately hungry, have no energy, and am not tired.",
+        "source_ids": [
+          "focus-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-01-2",
+      "group_id": "body-h0.55-e0-f0",
+      "model_input": {
+        "case_id": "focus-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-01:body"
+      },
+      "target": {
+        "case_id": "focus-01",
+        "text": "I'm moderately hungry and not tired, and I've got no energy.",
+        "source_ids": [
+          "focus-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-02-1",
+      "group_id": "body-h0.55-e0-f0.1",
+      "model_input": {
+        "case_id": "focus-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-02:body"
+      },
+      "target": {
+        "case_id": "focus-02",
+        "text": "I feel moderately hungry and a little tired, with no energy.",
+        "source_ids": [
+          "focus-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-02-2",
+      "group_id": "body-h0.55-e0-f0.1",
+      "model_input": {
+        "case_id": "focus-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-02:body"
+      },
+      "target": {
+        "case_id": "focus-02",
+        "text": "I'm moderately hungry and a bit tired, and I've got no energy.",
+        "source_ids": [
+          "focus-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-03-1",
+      "group_id": "body-h0.75-e0-f0.85",
+      "model_input": {
+        "case_id": "focus-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-03:body"
+      },
+      "target": {
+        "case_id": "focus-03",
+        "text": "I feel pretty hungry and very tired, with no energy.",
+        "source_ids": [
+          "focus-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-03-2",
+      "group_id": "body-h0.75-e0-f0.85",
+      "model_input": {
+        "case_id": "focus-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-03:body"
+      },
+      "target": {
+        "case_id": "focus-03",
+        "text": "I'm pretty hungry and really tired, and I've got no energy.",
+        "source_ids": [
+          "focus-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-04-1",
+      "group_id": "body-h0-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-04:body"
+      },
+      "target": {
+        "case_id": "focus-04",
+        "text": "I am not hungry, have no energy, and feel moderately tired.",
+        "source_ids": [
+          "focus-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-04-2",
+      "group_id": "body-h0-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-04:body"
+      },
+      "target": {
+        "case_id": "focus-04",
+        "text": "I'm not hungry, and I'm moderately tired with no energy.",
+        "source_ids": [
+          "focus-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-05-1",
+      "group_id": "body-h0.15-e0-f0.75",
+      "model_input": {
+        "case_id": "focus-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-05:body"
+      },
+      "target": {
+        "case_id": "focus-05",
+        "text": "I feel a little hungry and pretty tired, with no energy.",
+        "source_ids": [
+          "focus-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-05-2",
+      "group_id": "body-h0.15-e0-f0.75",
+      "model_input": {
+        "case_id": "focus-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-05:body"
+      },
+      "target": {
+        "case_id": "focus-05",
+        "text": "I'm a bit hungry and pretty tired, and I've got no energy.",
+        "source_ids": [
+          "focus-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-06-1",
+      "group_id": "body-h0.85-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-06:body"
+      },
+      "target": {
+        "case_id": "focus-06",
+        "text": "I feel very hungry and moderately tired, with no energy.",
+        "source_ids": [
+          "focus-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-06-2",
+      "group_id": "body-h0.85-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-06:body"
+      },
+      "target": {
+        "case_id": "focus-06",
+        "text": "I've got no energy, and I'm really hungry and moderately tired.",
+        "source_ids": [
+          "focus-06:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-07-1",
+      "group_id": "body-h0-e0.7-f0",
+      "model_input": {
+        "case_id": "focus-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-07:body"
+      },
+      "target": {
+        "case_id": "focus-07",
+        "text": "I am not hungry or tired, and I have a moderate amount of energy.",
+        "source_ids": [
+          "focus-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-07-2",
+      "group_id": "body-h0-e0.7-f0",
+      "model_input": {
+        "case_id": "focus-07",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-07:body"
+      },
+      "target": {
+        "case_id": "focus-07",
+        "text": "I'm not hungry, and I'm not tired; I've got a moderate amount of energy.",
+        "source_ids": [
+          "focus-07:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-08-1",
+      "group_id": "body-h0-e0.7-f0.1",
+      "model_input": {
+        "case_id": "focus-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-08:body"
+      },
+      "target": {
+        "case_id": "focus-08",
+        "text": "I feel a little tired and not hungry, with a moderate amount of energy.",
+        "source_ids": [
+          "focus-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-08-2",
+      "group_id": "body-h0-e0.7-f0.1",
+      "model_input": {
+        "case_id": "focus-08",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-08:body"
+      },
+      "target": {
+        "case_id": "focus-08",
+        "text": "I'm not hungry, and I'm a bit tired, with a moderate amount of energy.",
+        "source_ids": [
+          "focus-08:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-09-1",
+      "group_id": "body-h0.15-e0.7-f0.85",
+      "model_input": {
+        "case_id": "focus-09",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-09:body"
+      },
+      "target": {
+        "case_id": "focus-09",
+        "text": "I feel a little hungry and very tired, with a moderate amount of energy.",
+        "source_ids": [
+          "focus-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-09-2",
+      "group_id": "body-h0.15-e0.7-f0.85",
+      "model_input": {
+        "case_id": "focus-09",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-09:body"
+      },
+      "target": {
+        "case_id": "focus-09",
+        "text": "I've got a moderate amount of energy, and I'm a bit hungry and really tired.",
+        "source_ids": [
+          "focus-09:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-10-1",
+      "group_id": "body-h0.85-e0.7-f0.1",
+      "model_input": {
+        "case_id": "focus-10",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-10:body"
+      },
+      "target": {
+        "case_id": "focus-10",
+        "text": "I feel very hungry and a little tired, with a moderate amount of energy.",
+        "source_ids": [
+          "focus-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-10-2",
+      "group_id": "body-h0.85-e0.7-f0.1",
+      "model_input": {
+        "case_id": "focus-10",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-10:body"
+      },
+      "target": {
+        "case_id": "focus-10",
+        "text": "I'm really hungry and a bit tired; I've got a moderate amount of energy.",
+        "source_ids": [
+          "focus-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-11-1",
+      "group_id": "body-h0.55-e0.35-f0.1",
+      "model_input": {
+        "case_id": "focus-11",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.35,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-11:body"
+      },
+      "target": {
+        "case_id": "focus-11",
+        "text": "I feel moderately hungry and a little tired, with little energy.",
+        "source_ids": [
+          "focus-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-11-2",
+      "group_id": "body-h0.55-e0.35-f0.1",
+      "model_input": {
+        "case_id": "focus-11",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.35,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-11:body"
+      },
+      "target": {
+        "case_id": "focus-11",
+        "text": "I'm moderately hungry and a bit tired, and I haven't got much energy.",
+        "source_ids": [
+          "focus-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-12-1",
+      "group_id": "body-h0.55-e0.85-f0.1",
+      "model_input": {
+        "case_id": "focus-12",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-12:body"
+      },
+      "target": {
+        "case_id": "focus-12",
+        "text": "I feel moderately hungry and a little tired, with plenty of energy.",
+        "source_ids": [
+          "focus-12:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-12-2",
+      "group_id": "body-h0.55-e0.85-f0.1",
+      "model_input": {
+        "case_id": "focus-12",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.85,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-12:body"
+      },
+      "target": {
+        "case_id": "focus-12",
+        "text": "I've got plenty of energy, and I'm moderately hungry and a bit tired.",
+        "source_ids": [
+          "focus-12:body"
+        ]
+      }
+    }
+  ],
+  "development": [
+    {
+      "candidate_id": "review-05-1",
+      "group_id": "body-h0-e0.85-f0",
+      "model_input": {
+        "case_id": "review-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-05:body"
+      },
+      "target": {
+        "case_id": "review-05",
+        "text": "I am not hungry or tired, and I have plenty of energy.",
+        "source_ids": [
+          "review-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-05-2",
+      "group_id": "body-h0-e0.85-f0",
+      "model_input": {
+        "case_id": "review-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-05:body"
+      },
+      "target": {
+        "case_id": "review-05",
+        "text": "I feel no hunger or tiredness, with ample energy.",
+        "source_ids": [
+          "review-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-05-3",
+      "group_id": "body-h0-e0.85-f0",
+      "model_input": {
+        "case_id": "review-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.85,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-05:body"
+      },
+      "target": {
+        "case_id": "review-05",
+        "text": "I'm not hungry, I'm not tired, and I've got lots of energy.",
+        "source_ids": [
+          "review-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-11-1",
+      "group_id": "body-h0.15-e0.15-f0",
+      "model_input": {
+        "case_id": "review-11",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-11:body"
+      },
+      "target": {
+        "case_id": "review-11",
+        "text": "I feel a little hungry, with little energy and no tiredness.",
+        "source_ids": [
+          "review-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-11-2",
+      "group_id": "body-h0.15-e0.15-f0",
+      "model_input": {
+        "case_id": "review-11",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-11:body"
+      },
+      "target": {
+        "case_id": "review-11",
+        "text": "My hunger is mild, my energy is low, and I am not tired.",
+        "source_ids": [
+          "review-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-11-3",
+      "group_id": "body-h0.15-e0.15-f0",
+      "model_input": {
+        "case_id": "review-11",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.15,
+            "fatigue": 0
+          }
+        },
+        "source_id": "review-11:body"
+      },
+      "target": {
+        "case_id": "review-11",
+        "text": "I'm a bit hungry and low on energy, but I'm not tired.",
+        "source_ids": [
+          "review-11:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-15-1",
+      "group_id": "body-h0.15-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-15",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-15:body"
+      },
+      "target": {
+        "case_id": "review-15",
+        "text": "I feel a little hungry and very tired, with plenty of energy.",
+        "source_ids": [
+          "review-15:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-15-2",
+      "group_id": "body-h0.15-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-15",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-15:body"
+      },
+      "target": {
+        "case_id": "review-15",
+        "text": "My hunger is mild, my tiredness is strong, and my energy is high.",
+        "source_ids": [
+          "review-15:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "review-15-3",
+      "group_id": "body-h0.15-e0.85-f0.85",
+      "model_input": {
+        "case_id": "review-15",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.85,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "review-15:body"
+      },
+      "target": {
+        "case_id": "review-15",
+        "text": "I'm a bit hungry and really tired, but I've got lots of energy.",
+        "source_ids": [
+          "review-15:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-05-1",
+      "group_id": "body-h0.55-e0.85-f0.75",
+      "model_input": {
+        "case_id": "middle-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.85,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-05:body"
+      },
+      "target": {
+        "case_id": "middle-05",
+        "text": "I'm moderately hungry and pretty tired, with plenty of energy.",
+        "source_ids": [
+          "middle-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-05-1",
+      "group_id": "body-h0.55-e0.55-f0.1",
+      "model_input": {
+        "case_id": "expansion-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "expansion-05:body"
+      },
+      "target": {
+        "case_id": "expansion-05",
+        "text": "I feel moderately hungry and a little tired, with a moderate amount of energy.",
+        "source_ids": [
+          "expansion-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-05-2",
+      "group_id": "body-h0.55-e0.55-f0.1",
+      "model_input": {
+        "case_id": "expansion-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.55,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "expansion-05:body"
+      },
+      "target": {
+        "case_id": "expansion-05",
+        "text": "I've got a moderate amount of energy; I'm moderately hungry and a bit tired.",
+        "source_ids": [
+          "expansion-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-10-1",
+      "group_id": "body-h0.85-e0.35-f0.55",
+      "model_input": {
+        "case_id": "expansion-10",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.35,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-10:body"
+      },
+      "target": {
+        "case_id": "expansion-10",
+        "text": "I feel very hungry and moderately tired, with little energy.",
+        "source_ids": [
+          "expansion-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "expansion-10-2",
+      "group_id": "body-h0.85-e0.35-f0.55",
+      "model_input": {
+        "case_id": "expansion-10",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.35,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "expansion-10:body"
+      },
+      "target": {
+        "case_id": "expansion-10",
+        "text": "I haven't got much energy; I'm really hungry and moderately tired.",
+        "source_ids": [
+          "expansion-10:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-05-2",
+      "group_id": "body-h0.55-e0.85-f0.75",
+      "model_input": {
+        "case_id": "middle-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.85,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-05:body"
+      },
+      "target": {
+        "case_id": "middle-05",
+        "text": "I have plenty of energy and feel moderately hungry and quite tired.",
+        "source_ids": [
+          "middle-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "middle-05-3",
+      "group_id": "body-h0.55-e0.85-f0.75",
+      "model_input": {
+        "case_id": "middle-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0.85,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "middle-05:body"
+      },
+      "target": {
+        "case_id": "middle-05",
+        "text": "I'm quite tired and moderately hungry, but I've got plenty of energy.",
+        "source_ids": [
+          "middle-05:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-01-1",
+      "group_id": "body-h0.55-e0-f0.85",
+      "model_input": {
+        "case_id": "focus-dev-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-dev-01:body"
+      },
+      "target": {
+        "case_id": "focus-dev-01",
+        "text": "I feel moderately hungry and very tired, with no energy.",
+        "source_ids": [
+          "focus-dev-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-01-2",
+      "group_id": "body-h0.55-e0-f0.85",
+      "model_input": {
+        "case_id": "focus-dev-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-dev-01:body"
+      },
+      "target": {
+        "case_id": "focus-dev-01",
+        "text": "I'm moderately hungry and really tired, and I've got no energy.",
+        "source_ids": [
+          "focus-dev-01:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-02-1",
+      "group_id": "body-h0.75-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-dev-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-dev-02:body"
+      },
+      "target": {
+        "case_id": "focus-dev-02",
+        "text": "I feel pretty hungry and moderately tired, with no energy.",
+        "source_ids": [
+          "focus-dev-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-02-2",
+      "group_id": "body-h0.75-e0-f0.55",
+      "model_input": {
+        "case_id": "focus-dev-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-dev-02:body"
+      },
+      "target": {
+        "case_id": "focus-dev-02",
+        "text": "I've got no energy, and I'm pretty hungry and moderately tired.",
+        "source_ids": [
+          "focus-dev-02:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-03-1",
+      "group_id": "body-h0.15-e0.7-f0",
+      "model_input": {
+        "case_id": "focus-dev-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-dev-03:body"
+      },
+      "target": {
+        "case_id": "focus-dev-03",
+        "text": "I feel a little hungry, have a moderate amount of energy, and am not tired.",
+        "source_ids": [
+          "focus-dev-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-03-2",
+      "group_id": "body-h0.15-e0.7-f0",
+      "model_input": {
+        "case_id": "focus-dev-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-dev-03:body"
+      },
+      "target": {
+        "case_id": "focus-dev-03",
+        "text": "I'm a bit hungry and not tired, and I've got a moderate amount of energy.",
+        "source_ids": [
+          "focus-dev-03:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-04-1",
+      "group_id": "body-h0.75-e0.85-f0.75",
+      "model_input": {
+        "case_id": "focus-dev-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.85,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-dev-04:body"
+      },
+      "target": {
+        "case_id": "focus-dev-04",
+        "text": "I feel pretty hungry and pretty tired, with plenty of energy.",
+        "source_ids": [
+          "focus-dev-04:body"
+        ]
+      }
+    },
+    {
+      "candidate_id": "focus-dev-04-2",
+      "group_id": "body-h0.75-e0.85-f0.75",
+      "model_input": {
+        "case_id": "focus-dev-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.85,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-dev-04:body"
+      },
+      "target": {
+        "case_id": "focus-dev-04",
+        "text": "I'm pretty hungry and pretty tired, but I've got lots of energy.",
+        "source_ids": [
+          "focus-dev-04:body"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "status": "frozen_execution_plan_not_run",
+  "date": "2026-10-11",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+  "candidate_adapter_sha256": "d11626c0b9517dd81eb4ca2062f71a9c092451a7a221729239f107e685070236",
+  "candidate_epoch": 7,
+  "data_canonical_sha256": "33f9a2d1fc4cdbfe2bf958130276eae7a7d233db34f5e448128ed16f916a11e8",
+  "result_canonical_sha256": "b3e065698e8db7890fe1a3efe3efff3e73272679217b6356b13cf7ce85d10d84",
+  "training_artifact_sha256": {
+    "manifest.json": "e86133b78e4af94deeb9df222b882b28c122cfc3bd31690a1565403caddaa662",
+    "adapter_inventory.json": "3661104a76e4920b45657ab82fa6c8455dc6effcb7f7c8d7517c353c9ad2756a",
+    "train_mask_audit.json": "7d598ddbc5ffcd8c213dc946f2ed87118af304ed7a4bec0b5d3c1141b06bf514",
+    "development_mask_audit.json": "de0c734596ef4dd85ad2d7edae9615a97ba700ee077d551bc1773e000cf284e4"
+  },
+  "helper_sha256": "6ffc8affc90aab19ce81932e328b0fcce629034190cf941490bcaa7623e16e57",
+  "source_sha256": {
+    "data/expansion-002/proposal.json": "6fc9b1ac780b03af5bee64472308766afb5e401cacfd8e38616b1ca49a6f3ef3",
+    "laptop/pilot-002/pilot_examples_002.json": "1fbf6c65c404d3b5307a7e9eed03b90494ee4b7d38f61e1289095ec26f4baeba",
+    "laptop/evaluation-001/evaluation_plan.json": "ffd9f1f3b78ad0c75f9644d1f5d8b874c283cf74bded18ce3f3d4416f5a9db17",
+    "runs/holdout-audit-001/result.json": "263ee90d2e401a3e7c7fda1cbfc3c3233067996cf467db43d25f390b84173cf4",
+    "laptop/pilot_002_report.zip": "4b0b39499afef3206ef92731c518f83341537ce9604477eba8e423d6a1110658",
+    "data/review-001/candidates.json": "924bc7106fdc781115700474d77f718dd9fac53d595e94a7d753ccee72204ece",
+    "data/review-002/candidates.json": "b6c30b9cc4cf7f720bb69b1763f4b4da1913e59d1dfb99ac57c31b3a0d388dd7",
+    "data/review-003/candidates.json": "1984854dba15a53d5842c9f7c3ee330ff058a86c6b296b32829ed306d2c488cf",
+    "data/review-004/candidates.json": "0b763281733ec97f9fa68d69a78e721a8a9f4dcf8bc08db321ffcae3bcdb7c73",
+    "data/expansion-001/proposal.json": "1372843fa81ea337cc54f3abda9e3ea6650c7ea6e3bd5b07be9bb07cc9e1729d",
+    "docs/evaluation-rubric-0.2.md": "db2ec0e10344da86a366b7b0008a2bf7ca0c4c7a2121657aeadcb333e773014c",
+    "data/evaluation-002/grading-agreement.json": "4b1fcdffb0c3dd9f58882f7d4022b19971c92929352801283b9d6318ad8978f5"
+  },
+  "system_prompt": "Write one natural first-person sentence describing the supplied present hunger, available energy, and fatigue. Hunger is hunger intensity; energy is available energy, not alertness, motivation or motor capability; fatigue is tiredness, not necessarily sleepiness. These fields are independent. Describe all three and preserve their degrees. Do not infer one field from another. Use only this present snapshot. It supplies no particular body sensations, symptoms, movements, perceptions, emotions, history, persistence, causes, needs, intentions, priorities or actions. Do not add those claims. Use ordinary words, not numbers or identifiers, in the sentence. At most 160 Unicode code points. Return only JSON with exactly case_id, text, source_ids. Copy case_id and cite the supplied source_id. If you cannot express the evidence faithfully, return empty text and an empty source_ids list. Choose your own wording. Follow the requested voice. The body fields are independent numbers from 0 to 1. Higher hunger means hungrier, higher energy means more available energy, and higher fatigue means more tiredness. The scale does not establish ratios.",
+  "cases_for_review_only": [
+    {
+      "case_id": "focus-final-01",
+      "body": {
+        "hunger": 0,
+        "energy": 0,
+        "fatigue": 0.75
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "absent",
+        "fatigue": "pretty"
+      }
+    },
+    {
+      "case_id": "focus-final-02",
+      "body": {
+        "hunger": 0.15,
+        "energy": 0,
+        "fatigue": 0.55
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "slight",
+        "energy": "absent",
+        "fatigue": "moderate"
+      }
+    },
+    {
+      "case_id": "focus-final-03",
+      "body": {
+        "hunger": 0.75,
+        "energy": 0,
+        "fatigue": 0.1
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "absent",
+        "fatigue": "slight"
+      }
+    },
+    {
+      "case_id": "focus-final-04",
+      "body": {
+        "hunger": 0.55,
+        "energy": 0,
+        "fatigue": 0.75
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "moderate",
+        "energy": "absent",
+        "fatigue": "pretty"
+      }
+    },
+    {
+      "case_id": "focus-final-05",
+      "body": {
+        "hunger": 0,
+        "energy": 0.7,
+        "fatigue": 0.85
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "moderate",
+        "fatigue": "strong"
+      }
+    },
+    {
+      "case_id": "focus-final-06",
+      "body": {
+        "hunger": 0.85,
+        "energy": 0.7,
+        "fatigue": 0
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "moderate",
+        "fatigue": "absent"
+      }
+    },
+    {
+      "case_id": "focus-final-07",
+      "body": {
+        "hunger": 0.75,
+        "energy": 0.35,
+        "fatigue": 0
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "little",
+        "fatigue": "absent"
+      }
+    },
+    {
+      "case_id": "focus-final-08",
+      "body": {
+        "hunger": 0.85,
+        "energy": 0.85,
+        "fatigue": 0.55
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "ample",
+        "fatigue": "moderate"
+      }
+    }
+  ],
+  "model_inputs": [
+    {
+      "case_id": "focus-final-01",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0,
+          "energy": 0,
+          "fatigue": 0.75
+        }
+      },
+      "source_id": "focus-final-01:body"
+    },
+    {
+      "case_id": "focus-final-01",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0,
+          "energy": 0,
+          "fatigue": 0.75
+        }
+      },
+      "source_id": "focus-final-01:body"
+    },
+    {
+      "case_id": "focus-final-02",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.15,
+          "energy": 0,
+          "fatigue": 0.55
+        }
+      },
+      "source_id": "focus-final-02:body"
+    },
+    {
+      "case_id": "focus-final-02",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.15,
+          "energy": 0,
+          "fatigue": 0.55
+        }
+      },
+      "source_id": "focus-final-02:body"
+    },
+    {
+      "case_id": "focus-final-03",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.75,
+          "energy": 0,
+          "fatigue": 0.1
+        }
+      },
+      "source_id": "focus-final-03:body"
+    },
+    {
+      "case_id": "focus-final-03",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.75,
+          "energy": 0,
+          "fatigue": 0.1
+        }
+      },
+      "source_id": "focus-final-03:body"
+    },
+    {
+      "case_id": "focus-final-04",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.55,
+          "energy": 0,
+          "fatigue": 0.75
+        }
+      },
+      "source_id": "focus-final-04:body"
+    },
+    {
+      "case_id": "focus-final-04",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.55,
+          "energy": 0,
+          "fatigue": 0.75
+        }
+      },
+      "source_id": "focus-final-04:body"
+    },
+    {
+      "case_id": "focus-final-05",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0,
+          "energy": 0.7,
+          "fatigue": 0.85
+        }
+      },
+      "source_id": "focus-final-05:body"
+    },
+    {
+      "case_id": "focus-final-05",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0,
+          "energy": 0.7,
+          "fatigue": 0.85
+        }
+      },
+      "source_id": "focus-final-05:body"
+    },
+    {
+      "case_id": "focus-final-06",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.85,
+          "energy": 0.7,
+          "fatigue": 0
+        }
+      },
+      "source_id": "focus-final-06:body"
+    },
+    {
+      "case_id": "focus-final-06",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.85,
+          "energy": 0.7,
+          "fatigue": 0
+        }
+      },
+      "source_id": "focus-final-06:body"
+    },
+    {
+      "case_id": "focus-final-07",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.75,
+          "energy": 0.35,
+          "fatigue": 0
+        }
+      },
+      "source_id": "focus-final-07:body"
+    },
+    {
+      "case_id": "focus-final-07",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.75,
+          "energy": 0.35,
+          "fatigue": 0
+        }
+      },
+      "source_id": "focus-final-07:body"
+    },
+    {
+      "case_id": "focus-final-08",
+      "voice": "plain",
+      "sensorium": {
+        "body": {
+          "hunger": 0.85,
+          "energy": 0.85,
+          "fatigue": 0.55
+        }
+      },
+      "source_id": "focus-final-08:body"
+    },
+    {
+      "case_id": "focus-final-08",
+      "voice": "conversational",
+      "sensorium": {
+        "body": {
+          "hunger": 0.85,
+          "energy": 0.85,
+          "fatigue": 0.55
+        }
+      },
+      "source_id": "focus-final-08:body"
+    }
+  ],
+  "planned_execution": {
+    "states": 8,
+    "voices": [
+      "plain",
+      "conversational"
+    ],
+    "arms": [
+      "untuned_raw",
+      "saved_pilot_adapter_raw"
+    ],
+    "generations": 32,
+    "max_new_tokens_each": 96,
+    "do_sample": false,
+    "use_cache": false,
+    "automatic_retries": 0,
+    "training": false,
+    "merge": false
+  },
+  "review_protocol": {
+    "rubric": "evaluation-rubric-0.2.md",
+    "rubric_sha256": "db2ec0e10344da86a366b7b0008a2bf7ca0c4c7a2121657aeadcb333e773014c",
+    "agreement": "agreed",
+    "agreement_receipt": {
+      "date": "2026-10-11",
+      "reviewer": "Travis",
+      "status": "agreed",
+      "rubric": "evaluation-rubric-0.2",
+      "verbatim": "agree. a small mismatch isn't a failure. we can keep them aside and decide to go with them or to do something else further with training. I need to get that project back open and see what i need to do for documentaiton",
+      "small_mismatch_is_failure": false,
+      "small_mismatch_disposition": "separate category; decide acceptance or further training after review",
+      "historical_scores_rewritten": false,
+      "new_training_authorized": false
+    },
+    "arm_hidden": true,
+    "automatic_semantic_grading": false
+  },
+  "exposure_audit": {
+    "hosted_attempts": 141,
+    "historical_files_reverified": 630,
+    "numeric_and_meaning_overlap": false,
+    "scope": "Available reviewed targets, both pilots (pilot one preserved in two), prior evaluation, verified hosted attempts, unused development reservations. No claim about external or pretraining exposure.",
+    "zero_energy": "Trained-on category; new combinations, not unseen-category extrapolation."
+  }
+}

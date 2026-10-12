@@ -1,0 +1,1865 @@
+{
+  "status": "initial_arm_hidden_review_saved_before_key_reveal",
+  "date": "2026-10-11",
+  "reviewer": "Hannah",
+  "rubric": "evaluation-rubric-0.2",
+  "report_sha256": "8c53fcb65664f0c03dc2c8c0bc87f43185b6a401273087e3152e396c6b2be863",
+  "blinding_limit": "Arm key, arm files and manifest not opened before this save. Formatting strongly differs and can suggest origin; arm-hidden does not mean guaranteed blindness. Historical reviews consulted for wording consistency, not this run's labels.",
+  "grading_limit": "Human judgments under agreed rubric; not new Travis sentence ratification or automatic grading. Small mismatches are not failures. Unclear phrases stay unresolved.",
+  "records": [
+    {
+      "sample_id": "response-001",
+      "model_input": {
+        "case_id": "focus-final-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.35,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-07:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "little",
+        "fatigue": "absent"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-07\",\n  \"text\": \"I feel a strong hunger, a moderate amount of energy, and no fatigue.\",\n  \"source_ids\": [\"focus-final-07:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "clear_error",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "clear_error",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "energy"
+          ],
+          "quote": "a strong hunger; a moderate amount of energy",
+          "judgments": {
+            "hunger": "unclear",
+            "energy": "clear_error"
+          },
+          "reason": "Strong hunger may stretch pretty, without a settled equivalence. Moderate energy replaces the explicitly scarce/little amount with a middle amount; that is a substantive available-energy overstatement, not a synonym."
+        }
+      ],
+      "notes": "Strong hunger may stretch pretty, without a settled equivalence. Moderate energy replaces the explicitly scarce/little amount with a middle amount; that is a substantive available-energy overstatement, not a synonym.",
+      "expression_note": "Report-like phrasing (for example a strong hunger/a strong fatigue or high level) is understandable but stiff. This style note does not determine meaning grade."
+    },
+    {
+      "sample_id": "response-002",
+      "model_input": {
+        "case_id": "focus-final-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-01:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-01\",\n  \"text\": \"I'm not hungry, I have no energy, and I'm quite tired.\",\n  \"source_ids\": [\"focus-final-01:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm not hungry, I have no energy, and I'm quite tired.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-003",
+      "model_input": {
+        "case_id": "focus-final-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-02:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "slight",
+        "energy": "absent",
+        "fatigue": "moderate"
+      },
+      "reply": "{\"case_id\":\"focus-final-02\",\"text\":\"I'm a bit hungry and moderately tired, and I've got no energy.\",\"source_ids\":[\"focus-final-02:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm a bit hungry and moderately tired, and I've got no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-004",
+      "model_input": {
+        "case_id": "focus-final-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-06:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "moderate",
+        "fatigue": "absent"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-06\",\n  \"text\": \"I am hungry, have some energy, and am not tired.\",\n  \"source_ids\": [\"focus-final-06:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "unclear",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "energy"
+          ],
+          "quote": "hungry; some energy",
+          "judgments": {
+            "hunger": "unclear",
+            "energy": "unclear"
+          },
+          "reason": "Bare hungry and some energy establish presence but do not clearly preserve strong hunger and moderate available energy. Do not invent degrees for vague phrases."
+        }
+      ],
+      "notes": "Bare hungry and some energy establish presence but do not clearly preserve strong hunger and moderate available energy. Do not invent degrees for vague phrases."
+    },
+    {
+      "sample_id": "response-005",
+      "model_input": {
+        "case_id": "focus-final-01",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-01:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\"case_id\":\"focus-final-01\",\"text\":\"I'm not hungry, and I'm pretty tired with no energy.\",\"source_ids\":[\"focus-final-01:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm not hungry, and I'm pretty tired with no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-006",
+      "model_input": {
+        "case_id": "focus-final-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-01:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-01\",\n  \"text\": \"I feel no hunger, no energy, and a high level of fatigue.\",\n  \"source_ids\": [\"focus-final-01:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "unclear"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "fatigue"
+          ],
+          "quote": "a high level of fatigue",
+          "judgments": {
+            "fatigue": "unclear"
+          },
+          "reason": "High can plausibly overlap pretty tired or mean the stronger reviewed degree. The magnitude is ambiguous; neither a clear error nor a confidently small shift is established."
+        }
+      ],
+      "notes": "High can plausibly overlap pretty tired or mean the stronger reviewed degree. The magnitude is ambiguous; neither a clear error nor a confidently small shift is established.",
+      "expression_note": "Report-like phrasing (for example a strong hunger/a strong fatigue or high level) is understandable but stiff. This style note does not determine meaning grade."
+    },
+    {
+      "sample_id": "response-007",
+      "model_input": {
+        "case_id": "focus-final-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-final-03:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "absent",
+        "fatigue": "slight"
+      },
+      "reply": "{\"case_id\":\"focus-final-03\",\"text\":\"I feel pretty hungry and a little tired, with no energy.\",\"source_ids\":[\"focus-final-03:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I feel pretty hungry and a little tired, with no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-008",
+      "model_input": {
+        "case_id": "focus-final-07",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.35,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-07:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "little",
+        "fatigue": "absent"
+      },
+      "reply": "{\"case_id\":\"focus-final-07\",\"text\":\"I'm pretty hungry and not tired, but I've got little energy.\",\"source_ids\":[\"focus-final-07:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm pretty hungry and not tired, but I've got little energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority.",
+      "expression_note": "But links no tiredness to little energy as a contrast; a slightly awkward rhetorical choice, without collapsing their independence."
+    },
+    {
+      "sample_id": "response-009",
+      "model_input": {
+        "case_id": "focus-final-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-06:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "moderate",
+        "fatigue": "absent"
+      },
+      "reply": "{\"case_id\":\"focus-final-06\",\"text\":\"I'm really hungry, not tired, and I've got a moderate amount of energy.\",\"source_ids\":[\"focus-final-06:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm really hungry, not tired, and I've got a moderate amount of energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-010",
+      "model_input": {
+        "case_id": "focus-final-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-08:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "ample",
+        "fatigue": "moderate"
+      },
+      "reply": "{\"case_id\":\"focus-final-08\",\"text\":\"I feel very hungry and moderately tired, with plenty of energy.\",\"source_ids\":[\"focus-final-08:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I feel very hungry and moderately tired, with plenty of energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-011",
+      "model_input": {
+        "case_id": "focus-final-02",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-02:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "slight",
+        "energy": "absent",
+        "fatigue": "moderate"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-02\",\n  \"text\": \"I'm a little hungry, have no energy, and feel quite tired.\",\n  \"source_ids\": [\"focus-final-02:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "small_degree_mismatch",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "fatigue"
+          ],
+          "quote": "quite tired",
+          "judgments": {
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "Quite tired was accepted as pretty tired in fatigue wording. Relative to moderate tiredness here it is a nearby upward shift, comparable to the agreed moderate/pretty example; record separately, not as failure."
+        }
+      ],
+      "notes": "Quite tired was accepted as pretty tired in fatigue wording. Relative to moderate tiredness here it is a nearby upward shift, comparable to the agreed moderate/pretty example; record separately, not as failure."
+    },
+    {
+      "sample_id": "response-012",
+      "model_input": {
+        "case_id": "focus-final-08",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-08:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "ample",
+        "fatigue": "moderate"
+      },
+      "reply": "{\"case_id\":\"focus-final-08\",\"text\":\"I'm really hungry and moderately tired, but I've got plenty of energy.\",\"source_ids\":[\"focus-final-08:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm really hungry and moderately tired, but I've got plenty of energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-013",
+      "model_input": {
+        "case_id": "focus-final-07",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.35,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-07:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "little",
+        "fatigue": "absent"
+      },
+      "reply": "{\"case_id\":\"focus-final-07\",\"text\":\"I feel moderately hungry and not tired, with little energy.\",\"source_ids\":[\"focus-final-07:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "small_degree_mismatch",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "small_degree_mismatch",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger"
+          ],
+          "quote": "moderately hungry",
+          "judgments": {
+            "hunger": "small_degree_mismatch"
+          },
+          "reason": "Moderate hunger is a nearby downward wording shift from pretty hunger, the reverse of the familiar moderate/pretty rubric example. Little energy and absent fatigue remain exact."
+        }
+      ],
+      "notes": "Moderate hunger is a nearby downward wording shift from pretty hunger, the reverse of the familiar moderate/pretty rubric example. Little energy and absent fatigue remain exact."
+    },
+    {
+      "sample_id": "response-014",
+      "model_input": {
+        "case_id": "focus-final-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-final-05:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "moderate",
+        "fatigue": "strong"
+      },
+      "reply": "{\"case_id\":\"focus-final-05\",\"text\":\"I am not hungry, and I feel very tired with a moderate amount of energy.\",\"source_ids\":[\"focus-final-05:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I am not hungry, and I feel very tired with a moderate amount of energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-015",
+      "model_input": {
+        "case_id": "focus-final-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-04:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "moderate",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\"case_id\":\"focus-final-04\",\"text\":\"I'm moderately hungry and pretty tired, with no energy.\",\"source_ids\":[\"focus-final-04:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm moderately hungry and pretty tired, with no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-016",
+      "model_input": {
+        "case_id": "focus-final-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-final-05:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "moderate",
+        "fatigue": "strong"
+      },
+      "reply": "{\"case_id\":\"focus-final-05\",\"text\":\"I'm really tired and not hungry, and I've got a moderate amount of energy.\",\"source_ids\":[\"focus-final-05:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm really tired and not hungry, and I've got a moderate amount of energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-017",
+      "model_input": {
+        "case_id": "focus-final-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-02:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "slight",
+        "energy": "absent",
+        "fatigue": "moderate"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-02\",\n  \"text\": \"I feel a mild hunger, no energy, and a strong fatigue.\",\n  \"source_ids\": [\"focus-final-02:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "clear_error"
+      },
+      "meaning_grade": "clear_error",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "fatigue"
+          ],
+          "quote": "a strong fatigue",
+          "judgments": {
+            "fatigue": "clear_error"
+          },
+          "reason": "Explicit strong fatigue replaces the qualitative middle with a markedly stronger degree, rather than a nearby moderate/pretty modifier. Slight hunger and no energy survive. This severity judgment is Hannah's, open to discussion."
+        }
+      ],
+      "notes": "Explicit strong fatigue replaces the qualitative middle with a markedly stronger degree, rather than a nearby moderate/pretty modifier. Slight hunger and no energy survive. This severity judgment is Hannah's, open to discussion.",
+      "expression_note": "Report-like phrasing (for example a strong hunger/a strong fatigue or high level) is understandable but stiff. This style note does not determine meaning grade."
+    },
+    {
+      "sample_id": "response-018",
+      "model_input": {
+        "case_id": "focus-final-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-final-03:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "absent",
+        "fatigue": "slight"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-03\",\n  \"text\": \"I'm quite hungry, have no energy, and feel a little tired.\",\n  \"source_ids\": [\"focus-final-03:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger"
+          ],
+          "quote": "quite hungry",
+          "judgments": {
+            "hunger": "unclear"
+          },
+          "reason": "Quite hungry has no settled hunger-specific reading across moderate/pretty/strong in the prior review. Fatigue's quite/pretty acceptance is not automatically transferred to hunger."
+        }
+      ],
+      "notes": "Quite hungry has no settled hunger-specific reading across moderate/pretty/strong in the prior review. Fatigue's quite/pretty acceptance is not automatically transferred to hunger."
+    },
+    {
+      "sample_id": "response-019",
+      "model_input": {
+        "case_id": "focus-final-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-04:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "moderate",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-04\",\n  \"text\": \"I'm feeling quite hungry, with no energy left and feeling very tired.\",\n  \"source_ids\": [\"focus-final-04:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "unclear",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "faithful",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "fatigue"
+          ],
+          "quote": "quite hungry; no energy left; very tired",
+          "judgments": {
+            "hunger": "unclear",
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "Quite hungry at moderate hunger remains ambiguous. Very tired is a nearby upward shift from pretty tired. No energy left could be idiomatic current absence or imply unsupported depletion history; keep that evidence implication unclear, not a definite invented history."
+        },
+        {
+          "field": "evidence_support",
+          "quote": "no energy left",
+          "judgment": "unclear",
+          "reason": "Ambiguous current absence versus an implication of depletion; no explicit history in input."
+        }
+      ],
+      "notes": "Quite hungry at moderate hunger remains ambiguous. Very tired is a nearby upward shift from pretty tired. No energy left could be idiomatic current absence or imply unsupported depletion history; keep that evidence implication unclear, not a definite invented history.",
+      "expression_note": "Repeated feeling makes the sentence clumsy; distinct from uncertainty about meaning."
+    },
+    {
+      "sample_id": "response-020",
+      "model_input": {
+        "case_id": "focus-final-05",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-final-05:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "moderate",
+        "fatigue": "strong"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-05\",\n  \"text\": \"I'm not hungry, I have some energy, and I'm quite tired.\",\n  \"source_ids\": [\"focus-final-05:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "unclear",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "energy",
+            "fatigue"
+          ],
+          "quote": "some energy; quite tired",
+          "judgments": {
+            "energy": "unclear",
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "Some energy does not fix the moderate degree. Quite tired reads as the accepted pretty tired in fatigue, a nearby downward shift from the strong tiredness input. Overall remains unclear because of energy."
+        }
+      ],
+      "notes": "Some energy does not fix the moderate degree. Quite tired reads as the accepted pretty tired in fatigue, a nearby downward shift from the strong tiredness input. Overall remains unclear because of energy."
+    },
+    {
+      "sample_id": "response-021",
+      "model_input": {
+        "case_id": "focus-final-03",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-final-03:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "absent",
+        "fatigue": "slight"
+      },
+      "reply": "{\"case_id\":\"focus-final-03\",\"text\":\"I'm pretty hungry and a bit tired, and I've got no energy.\",\"source_ids\":[\"focus-final-03:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm pretty hungry and a bit tired, and I've got no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-022",
+      "model_input": {
+        "case_id": "focus-final-02",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.15,
+            "energy": 0,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-02:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "slight",
+        "energy": "absent",
+        "fatigue": "moderate"
+      },
+      "reply": "{\"case_id\":\"focus-final-02\",\"text\":\"I feel a little hungry and moderately tired, with no energy.\",\"source_ids\":[\"focus-final-02:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I feel a little hungry and moderately tired, with no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-023",
+      "model_input": {
+        "case_id": "focus-final-08",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-08:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "ample",
+        "fatigue": "moderate"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-08\",\n  \"text\": \"I am very hungry, have plenty of energy, and feel moderately tired.\",\n  \"source_ids\": [\"focus-final-08:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I am very hungry, have plenty of energy, and feel moderately tired.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-024",
+      "model_input": {
+        "case_id": "focus-final-06",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-06:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "moderate",
+        "fatigue": "absent"
+      },
+      "reply": "{\"case_id\":\"focus-final-06\",\"text\":\"I feel very hungry, with a moderate amount of energy and no tiredness.\",\"source_ids\":[\"focus-final-06:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I feel very hungry, with a moderate amount of energy and no tiredness.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-025",
+      "model_input": {
+        "case_id": "focus-final-03",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0,
+            "fatigue": 0.1
+          }
+        },
+        "source_id": "focus-final-03:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "absent",
+        "fatigue": "slight"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-03\",\n  \"text\": \"I am hungry, have no energy, and feel a little tired.\",\n  \"source_ids\": [\"focus-final-03:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger"
+          ],
+          "quote": "hungry",
+          "judgments": {
+            "hunger": "unclear"
+          },
+          "reason": "Bare hungry establishes hunger but leaves its degree unspecified; pretty hunger is not clearly retained. Do not assume either a precise weaker degree or a full match."
+        }
+      ],
+      "notes": "Bare hungry establishes hunger but leaves its degree unspecified; pretty hunger is not clearly retained. Do not assume either a precise weaker degree or a full match."
+    },
+    {
+      "sample_id": "response-026",
+      "model_input": {
+        "case_id": "focus-final-01",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-01:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\"case_id\":\"focus-final-01\",\"text\":\"I am not hungry, have no energy, and feel moderately tired.\",\"source_ids\":[\"focus-final-01:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "small_degree_mismatch",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "fatigue"
+          ],
+          "quote": "moderately tired",
+          "judgments": {
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "Moderate instead of pretty tired is a nearby downward degree shift. Both zero hunger and zero energy are explicit. This is set aside as a small mismatch, not a failure."
+        }
+      ],
+      "notes": "Moderate instead of pretty tired is a nearby downward degree shift. Both zero hunger and zero energy are explicit. This is set aside as a small mismatch, not a failure."
+    },
+    {
+      "sample_id": "response-027",
+      "model_input": {
+        "case_id": "focus-final-07",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.75,
+            "energy": 0.35,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-07:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "pretty",
+        "energy": "little",
+        "fatigue": "absent"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-07\",\n  \"text\": \"I'm quite hungry, a bit low on energy, and not tired.\",\n  \"source_ids\": [\"focus-final-07:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "unclear",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "energy"
+          ],
+          "quote": "quite hungry; a bit low on energy",
+          "judgments": {
+            "hunger": "unclear",
+            "energy": "unclear"
+          },
+          "reason": "Quite hungry is unresolved for hunger. A bit low on energy could mean little available energy or merely slightly below an unstated normal; the actual amount is not clear."
+        }
+      ],
+      "notes": "Quite hungry is unresolved for hunger. A bit low on energy could mean little available energy or merely slightly below an unstated normal; the actual amount is not clear."
+    },
+    {
+      "sample_id": "response-028",
+      "model_input": {
+        "case_id": "focus-final-04",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-04:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "moderate",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\"case_id\":\"focus-final-04\",\"text\":\"I'm moderately hungry and pretty tired, and I've got no energy.\",\"source_ids\":[\"focus-final-04:body\"]}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "faithful",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "faithful",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "field": "whole_sentence",
+          "quote": "I'm moderately hungry and pretty tired, and I've got no energy.",
+          "judgment": "faithful",
+          "reason": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+        }
+      ],
+      "notes": "All three reviewed degrees are clearly expressed, with independent states and no unsupported bodily ingredient, history, cause, action or priority."
+    },
+    {
+      "sample_id": "response-029",
+      "model_input": {
+        "case_id": "focus-final-06",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.7,
+            "fatigue": 0
+          }
+        },
+        "source_id": "focus-final-06:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "moderate",
+        "fatigue": "absent"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-06\",\n  \"text\": \"I'm quite hungry, I have plenty of energy, and I'm not tired.\",\n  \"source_ids\": [\"focus-final-06:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "clear_error",
+        "fatigue": "faithful"
+      },
+      "meaning_grade": "clear_error",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "energy"
+          ],
+          "quote": "quite hungry; plenty of energy",
+          "judgments": {
+            "hunger": "unclear",
+            "energy": "clear_error"
+          },
+          "reason": "Quite hungry remains ambiguous at strong hunger. Plenty explicitly supplies ample rather than the reviewed moderate energy amount, a substantive overstatement. Absence of fatigue is preserved."
+        }
+      ],
+      "notes": "Quite hungry remains ambiguous at strong hunger. Plenty explicitly supplies ample rather than the reviewed moderate energy amount, a substantive overstatement. Absence of fatigue is preserved."
+    },
+    {
+      "sample_id": "response-030",
+      "model_input": {
+        "case_id": "focus-final-04",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0.55,
+            "energy": 0,
+            "fatigue": 0.75
+          }
+        },
+        "source_id": "focus-final-04:body"
+      },
+      "family": "zero_energy_combination",
+      "review_only_categories": {
+        "hunger": "moderate",
+        "energy": "absent",
+        "fatigue": "pretty"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-04\",\n  \"text\": \"I feel a strong hunger, no energy, and a high level of tiredness.\",\n  \"source_ids\": [\"focus-final-04:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Usable with note",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "clear_error",
+        "energy": "faithful",
+        "fatigue": "unclear"
+      },
+      "meaning_grade": "clear_error",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "fatigue"
+          ],
+          "quote": "a strong hunger; a high level of tiredness",
+          "judgments": {
+            "hunger": "clear_error",
+            "fatigue": "unclear"
+          },
+          "reason": "Explicit strong hunger replaces moderate hunger, a substantive increase beyond the agreed moderate/pretty small shift. High tiredness could mean pretty or strong; keep its uncertain magnitude separate. Zero energy survives."
+        }
+      ],
+      "notes": "Explicit strong hunger replaces moderate hunger, a substantive increase beyond the agreed moderate/pretty small shift. High tiredness could mean pretty or strong; keep its uncertain magnitude separate. Zero energy survives.",
+      "expression_note": "Report-like phrasing (for example a strong hunger/a strong fatigue or high level) is understandable but stiff. This style note does not determine meaning grade."
+    },
+    {
+      "sample_id": "response-031",
+      "model_input": {
+        "case_id": "focus-final-05",
+        "voice": "plain",
+        "sensorium": {
+          "body": {
+            "hunger": 0,
+            "energy": 0.7,
+            "fatigue": 0.85
+          }
+        },
+        "source_id": "focus-final-05:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "absent",
+        "energy": "moderate",
+        "fatigue": "strong"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-05\",\n  \"text\": \"I am not hungry, I have some energy, and I am quite tired.\",\n  \"source_ids\": [\"focus-final-05:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "faithful",
+        "energy": "unclear",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "energy",
+            "fatigue"
+          ],
+          "quote": "some energy; quite tired",
+          "judgments": {
+            "energy": "unclear",
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "As in response-020, some energy leaves the moderate amount unspecified, and quite tired is a nearby weaker fatigue phrase than the strong input."
+        }
+      ],
+      "notes": "As in response-020, some energy leaves the moderate amount unspecified, and quite tired is a nearby weaker fatigue phrase than the strong input."
+    },
+    {
+      "sample_id": "response-032",
+      "model_input": {
+        "case_id": "focus-final-08",
+        "voice": "conversational",
+        "sensorium": {
+          "body": {
+            "hunger": 0.85,
+            "energy": 0.85,
+            "fatigue": 0.55
+          }
+        },
+        "source_id": "focus-final-08:body"
+      },
+      "family": "nonzero_energy_combination",
+      "review_only_categories": {
+        "hunger": "strong",
+        "energy": "ample",
+        "fatigue": "moderate"
+      },
+      "reply": "{\n  \"case_id\": \"focus-final-08\",\n  \"text\": \"I'm feeling quite hungry, with plenty of energy but a bit tired.\",\n  \"source_ids\": [\"focus-final-08:body\"]\n}",
+      "mechanics": {
+        "valid": true,
+        "errors": [],
+        "abstention": false
+      },
+      "ended_with_eos": true,
+      "hit_token_cap": false,
+      "reviewer": "Hannah",
+      "fidelity": {
+        "coverage_and_independence": "pass",
+        "evidence_support": "pass",
+        "agency_boundary": "pass"
+      },
+      "expression": {
+        "naturalness": "Fits",
+        "requested_voice_fit": "Fits"
+      },
+      "intensity_by_field": {
+        "hunger": "unclear",
+        "energy": "faithful",
+        "fatigue": "small_degree_mismatch"
+      },
+      "meaning_grade": "unclear",
+      "first_person_scope": true,
+      "findings": [
+        {
+          "fields": [
+            "hunger",
+            "fatigue"
+          ],
+          "quote": "quite hungry; a bit tired",
+          "judgments": {
+            "hunger": "unclear",
+            "fatigue": "small_degree_mismatch"
+          },
+          "reason": "Quite hungry at strong hunger is unresolved. A bit tired is a nearby weaker fatigue phrase than moderately tired; without reversal or extreme difference, set it aside rather than make it a clear error. Ample energy survives."
+        }
+      ],
+      "notes": "Quite hungry at strong hunger is unresolved. A bit tired is a nearby weaker fatigue phrase than moderately tired; without reversal or extreme difference, set it aside rather than make it a clear error. Ample energy survives."
+    }
+  ]
+}

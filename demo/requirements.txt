@@ -1,0 +1,2 @@
+# UI only. Install in a separate venv, never the pinned training environment.
+gradio==6.30.0

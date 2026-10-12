@@ -1,0 +1,26 @@
+Felt-State Projector
+Copyright (c) 2026 Travis Appel
+
+Original project code and original project documentation/data are MIT licensed.
+The MIT license does not replace the following model or dependency terms.
+
+Base: nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+Developer: NVIDIA Corporation
+Revision: dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f
+Model card: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+
+Licensed by NVIDIA Corporation under the NVIDIA Nemotron Model License.
+
+The downloadable build contains a separately trained, unmerged LoRA adapter and
+saved NVIDIA tokenizer/configuration artifacts. Model artifacts are distributed
+subject to the NVIDIA Nemotron Open Model License, not the project's MIT license.
+A copy of the NVIDIA license is in licenses/NVIDIA-Nemotron-Open-Model-License.pdf.
+The base weights are not included; the installer downloads the pinned revision.
+
+Modification: LoRA fine-tuning for synthetic hunger/energy/fatigue descriptions,
+selected epoch seven from pilot 002. See MODEL_CARD.md for scope and evaluation.
+
+The optional receiver uses nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B via Nebius Token
+Factory. No receiver weights or credentials are distributed. Service terms apply.
+Python dependencies are downloaded separately under their respective licenses.
+This independent project is not endorsed by NVIDIA or Nebius.

@@ -1,0 +1,11 @@
+# Core versions from the reviewed training manifest. Linux x86_64 / CPython 3.12.
+# Install torch from the CUDA 13 index first (see README), with exported constraints.
+torch==2.9.1+cu130
+transformers==4.48.3
+peft==0.14.0
+accelerate==1.12.0
+triton==3.5.1
+safetensors==0.8.0
+huggingface-hub==0.36.2
+https://github.com/state-spaces/mamba/releases/download/v2.3.2.post1/mamba_ssm-2.3.2.post1+cu13torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=d0fe28c541827caa3d3f01f9c8c55537dee1bdeca815d9b296abe2443b1d3fbd
+https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.7.0/causal_conv1d-1.7.0+cu13torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=6daa86afaca0212e187752499ae9238c842a161e6bac27f829f0626a2d67911d
